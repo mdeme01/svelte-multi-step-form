@@ -25,6 +25,10 @@ export default {
 				'msf-font-regular': '400',
 				'msf-font-medium': '500',
 				'msf-font-bold': '700'
+			},
+			backgroundImage: {
+				'sidebar-mobile': "url('/images/bg-sidebar-mobile.svg')",
+				'sidebar-desktop': "url('/images/bg-sidebar-desktop.svg')"
 			}
 		}
 	},
