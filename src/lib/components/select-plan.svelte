@@ -6,22 +6,27 @@
 	<h1>Select your plan</h1>
 	<p>You have the option of monthly or yearly billing.</p>
 	<form>
-		{#each plans as plan (plan.id)}
-			<label>
-				<input
-					class={'radio-button'}
-					type={'radio'}
-					name={'plan'}
-					id={plan.id}
-					value={plan.id}
-					checked={$subscription.plan.id === plan.id}
-					on:change={() => subscription.changePlan(plan)}
-				/>
-				{plan.props.name} ({$subscription.billing === 'monthly'
-					? '$' + plan.props.monthlyPrice + '/mo'
-					: '$' + plan.props.yearlyPrice + '/yr'})
-			</label>
-		{/each}
+		<div class={'plans'}>
+			{#each plans as plan (plan.id)}
+				<button
+					class={$subscription.plan.id === plan.id ? 'active radio-button' : 'radio-button'}
+					on:click={() => subscription.changePlan(plan)}
+				>
+					<img src={`/images/icon-${plan.id}.svg`} alt={`${plan.id}-icon`} />
+					<div>
+						<div class={'plan-name'}>{plan.props.name}</div>
+						<div class={'plan-price'}>
+							{$subscription.billing === 'monthly'
+								? '$' + plan.props.monthlyPrice + '/mo'
+								: '$' + plan.props.yearlyPrice + '/yr'}
+						</div>
+						{#if $subscription.billing === 'yearly'}
+							<div class={'note'}>{'2 months free'}</div>
+						{/if}
+					</div>
+				</button>
+			{/each}
+		</div>
 		<div class="billing-toggle">
 			<div
 				class={$subscription.billing === 'monthly' ? 'text-msf-marine-blue' : 'text-msf-cool-gray'}
@@ -57,7 +62,7 @@
 
 <style lang="postcss">
 	form {
-		@apply flex flex-col gap-5;
+		@apply flex flex-col gap-8;
 	}
 
 	.billing-toggle {
@@ -69,6 +74,30 @@
 	}
 
 	.radio-button {
-		@apply h-full w-full p-5;
+		@apply flex cursor-pointer items-center gap-3 rounded-md border border-msf-cool-gray p-3 hover:border-msf-purplish-blue md:w-1/3 md:flex-col md:items-start md:gap-5 md:pr-10;
+	}
+
+	.radio-button.active {
+		@apply border-msf-purplish-blue bg-msf-magnolia;
+	}
+
+	.radio-button > div {
+		@apply flex flex-col gap-1 text-left;
+	}
+
+	.plans {
+		@apply flex flex-col gap-3 md:flex-row;
+	}
+
+	.plan-name {
+		@apply text-lg font-msf-font-bold text-msf-marine-blue;
+	}
+
+	.plan-price {
+		@apply font-msf-font-medium text-msf-cool-gray;
+	}
+
+	.note {
+		@apply text-sm font-msf-font-medium text-msf-marine-blue;
 	}
 </style>
