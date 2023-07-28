@@ -13,10 +13,9 @@ main {
 	@apply grid md:rounded-md md:bg-msf-white md:pb-5 md:pl-5 md:pr-24 md:pt-5;
 
 	grid-template:
-		'sidebar' 1fr
+		'sidebar' 0.5fr
 		'form' 1fr
-		'.' 1fr
-		'navbuttons' 0.3fr
+		'navbuttons' 0.1fr
 		/ 1fr;
 
 	@media only screen and (min-width: 768px) {
@@ -26,4 +25,28 @@ main {
 			'sidebar navbuttons' 0.3fr
 			/ 0.8fr 1fr;
 	}
+}
+
+h1 {
+	@apply mb-2 text-2xl font-msf-font-bold text-msf-marine-blue;
+}
+
+p {
+	@apply text-msf-cool-gray;
+}
+
+form {
+	@apply mt-5;
+}
+
+label {
+	@apply text-sm text-msf-marine-blue;
+}
+
+input {
+	@apply mt-2 rounded-md border border-msf-cool-gray/60 p-3;
+}
+
+input::placeholder {
+	@apply font-msf-font-medium;
 }
