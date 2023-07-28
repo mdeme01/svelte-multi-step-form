@@ -1,0 +1,14 @@
+{
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll.eslint"],
+		"editor.formatOnSave": true,
+		"editor.tabSize": 2
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll.eslint"],
+		"editor.formatOnSave": true,
+		"editor.tabSize": 2
+	}
+}
