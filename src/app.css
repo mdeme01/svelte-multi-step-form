@@ -7,3 +7,7 @@
 body {
 	@apply bg-msf-magnolia font-msf-font-family text-msf-font-size font-msf-font-regular;
 }
+
+main {
+	@apply bg-msf-white;
+}
