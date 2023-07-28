@@ -5,9 +5,25 @@
 @tailwind utilities;
 
 body {
-	@apply bg-msf-magnolia font-msf-font-family text-msf-font-size font-msf-font-regular;
+	@apply grid bg-msf-magnolia font-msf-font-family text-msf-font-size font-msf-font-regular md:place-content-center;
+	height: 100vh;
 }
 
 main {
-	@apply bg-msf-white;
+	@apply grid md:rounded-md md:bg-msf-white md:pb-5 md:pl-5 md:pr-24 md:pt-5;
+
+	grid-template:
+		'sidebar' 1fr
+		'form' 1fr
+		'.' 1fr
+		'navbuttons' 0.3fr
+		/ 1fr;
+
+	@media only screen and (min-width: 768px) {
+		grid-template:
+			'sidebar form' 1fr
+			'sidebar form' 1fr
+			'sidebar navbuttons' 0.3fr
+			/ 0.8fr 1fr;
+	}
 }

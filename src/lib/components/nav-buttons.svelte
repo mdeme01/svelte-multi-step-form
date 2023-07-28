@@ -19,7 +19,8 @@
 
 <style lang="postcss">
 	nav {
-		@apply absolute bottom-0 flex w-full items-center bg-msf-white p-5 sm:static;
+		@apply flex w-full items-end bg-msf-white p-5 pb-3;
+		grid-area: navbuttons;
 	}
 
 	button {

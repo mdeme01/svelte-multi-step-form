@@ -29,7 +29,8 @@
 
 <style lang="postcss">
 	ol {
-		@apply flex h-[172px] w-full items-center justify-center gap-5 bg-sidebar-mobile bg-cover bg-no-repeat p-8 sm:h-[568px] sm:w-[274px] sm:flex-col sm:items-start sm:justify-start sm:bg-sidebar-desktop sm:bg-contain;
+		@apply flex h-[172px] w-full items-start justify-center gap-5 bg-sidebar-mobile bg-cover bg-no-repeat p-8 md:h-[568px] md:w-[274px] md:flex-col md:justify-start md:bg-sidebar-desktop md:bg-contain;
+		grid-area: sidebar;
 	}
 
 	li {
@@ -41,7 +42,7 @@
 	}
 
 	.list-item-text {
-		@apply hidden flex-col uppercase sm:flex;
+		@apply hidden flex-col uppercase md:flex;
 	}
 
 	.active {
