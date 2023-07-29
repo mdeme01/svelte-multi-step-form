@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 
-type AddOn = {
+type Addon = {
 	id: 'online_service' | 'larger_storage' | 'custom_profile';
 	props: {
 		name: string;
@@ -22,11 +22,11 @@ type Plan = {
 
 type Subscription = {
 	plan: Plan;
-	addons: AddOn[];
+	addons: Addon[];
 	billing: 'monthly' | 'yearly';
 };
 
-const addOns: AddOn[] = [
+const addons: Addon[] = [
 	{
 		id: 'online_service',
 		props: {
@@ -85,7 +85,7 @@ const createPlanStore = () => {
 			return newSubscription;
 		});
 
-	const changeAddOns = (addons: AddOn[]) =>
+	const changeAddOns = (addons: Addon[]) =>
 		update((value) => {
 			const newSubscription = { plan: value.plan, addons, billing: value.billing };
 			if (browser) localStorage.setItem('subscription', JSON.stringify(newSubscription));
@@ -109,4 +109,4 @@ const createPlanStore = () => {
 
 const subscription = createPlanStore();
 
-export { addOns, plans, subscription };
+export { addons, plans, subscription };
