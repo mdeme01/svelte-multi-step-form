@@ -7,7 +7,7 @@
 	import { step } from '$lib/stores/step-store';
 </script>
 
-<section>
+<section class={$step === 5 ? 'md:place-self-center' : ''}>
 	{#if $step === 1}
 		<PersonalInfo />
 	{:else if $step === 2}
