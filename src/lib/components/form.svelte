@@ -7,23 +7,14 @@
 	import { step } from '$lib/stores/step-store';
 </script>
 
-<section class={$step === 5 ? 'md:place-self-center' : ''}>
-	{#if $step === 1}
-		<PersonalInfo />
-	{:else if $step === 2}
-		<SelectPlan />
-	{:else if $step === 3}
-		<AddOns />
-	{:else if $step === 4}
-		<FinishUp />
-	{:else}
-		<Confirmed />
-	{/if}
-</section>
-
-<style lang="postcss">
-	section {
-		@apply relative bottom-36 z-10 h-max rounded-md bg-msf-white p-8 md:static md:mr-0 md:max-w-[440px] md:p-0 md:pt-8;
-		grid-area: form;
-	}
-</style>
+{#if $step === 1}
+	<PersonalInfo />
+{:else if $step === 2}
+	<SelectPlan />
+{:else if $step === 3}
+	<AddOns />
+{:else if $step === 4}
+	<FinishUp />
+{:else}
+	<Confirmed />
+{/if}

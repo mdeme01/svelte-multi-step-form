@@ -13,16 +13,13 @@ main {
 	@apply grid gap-5 md:gap-28 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3;
 
 	grid-template:
-		'sidebar' 0.5fr
+		'sidebar' 0.1fr
 		'form' 1fr
-		'navbuttons' 0.1fr
 		/ 1fr;
 
 	@media screen and (min-width: 920px) {
 		grid-template:
 			'sidebar form' 1fr
-			'sidebar form' 1fr
-			'sidebar navbuttons' 0.3fr
 			/ 274px minmax(440px, 1fr);
 	}
 }
@@ -31,22 +28,45 @@ h1 {
 	@apply mb-2 text-3xl font-msf-font-bold text-msf-marine-blue;
 }
 
-p {
-	@apply text-msf-cool-gray;
-}
-
-form {
-	@apply mt-5;
-}
-
 label {
 	@apply text-sm text-msf-marine-blue;
 }
 
-input {
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
 	@apply mt-2 rounded-md border border-msf-cool-gray/60 p-3;
 }
 
 input::placeholder {
 	@apply font-msf-font-medium;
+}
+
+.form-step {
+	@apply rounded-md p-8 md:mr-0 md:max-w-[440px] md:bg-msf-white md:p-0 md:pt-8;
+	grid-area: form;
+}
+
+.form-content {
+	@apply bg-msf-white;
+}
+
+.form-button-wrapper {
+	@apply absolute bottom-0 z-10 flex bg-msf-white md:static;
+}
+
+.form-button {
+	@apply cursor-pointer rounded-md pb-3 pl-5 pr-5 pt-3 font-msf-font-medium;
+}
+
+.btn-back {
+	@apply form-button text-msf-cool-gray hover:text-msf-marine-blue;
+}
+
+.btn-next {
+	@apply form-button bg-msf-marine-blue text-msf-white hover:bg-msf-marine-blue/80;
+}
+
+.btn-confirm {
+	@apply form-button bg-msf-purplish-blue text-msf-white hover:bg-msf-purplish-blue/80;
 }
