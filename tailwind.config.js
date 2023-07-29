@@ -3,7 +3,7 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		screens: {
-			md: '840px'
+			md: '920px'
 		},
 		extend: {
 			colors: {

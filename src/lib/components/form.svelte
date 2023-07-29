@@ -23,7 +23,7 @@
 
 <style lang="postcss">
 	section {
-		@apply relative bottom-36 z-10 h-max rounded-md bg-msf-white p-8 md:static md:ml-20 md:mr-0 md:max-w-[440px] md:p-0 md:pt-8;
+		@apply relative bottom-36 z-10 h-max rounded-md bg-msf-white p-8 md:static md:mr-0 md:max-w-[440px] md:p-0 md:pt-8;
 		grid-area: form;
 	}
 </style>

@@ -10,7 +10,7 @@ body {
 }
 
 main {
-	@apply grid gap-5 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3;
+	@apply grid gap-5 md:gap-28 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3;
 
 	grid-template:
 		'sidebar' 0.5fr
@@ -18,7 +18,7 @@ main {
 		'navbuttons' 0.1fr
 		/ 1fr;
 
-	@media screen and (min-width: 840px) {
+	@media screen and (min-width: 920px) {
 		grid-template:
 			'sidebar form' 1fr
 			'sidebar form' 1fr
