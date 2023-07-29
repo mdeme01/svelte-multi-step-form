@@ -10,7 +10,7 @@ body {
 }
 
 main {
-	@apply grid md:rounded-md md:bg-msf-white md:pb-5 md:pl-5 md:pr-24 md:pt-5;
+	@apply grid gap-5 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3;
 
 	grid-template:
 		'sidebar' 0.5fr
@@ -18,17 +18,17 @@ main {
 		'navbuttons' 0.1fr
 		/ 1fr;
 
-	@media only screen and (min-width: 768px) {
+	@media screen and (min-width: 840px) {
 		grid-template:
 			'sidebar form' 1fr
 			'sidebar form' 1fr
 			'sidebar navbuttons' 0.3fr
-			/ 0.8fr 1fr;
+			/ 274px minmax(440px, 1fr);
 	}
 }
 
 h1 {
-	@apply mb-2 text-2xl font-msf-font-bold text-msf-marine-blue;
+	@apply mb-2 text-3xl font-msf-font-bold text-msf-marine-blue;
 }
 
 p {

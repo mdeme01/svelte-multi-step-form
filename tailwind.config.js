@@ -2,6 +2,9 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
+		screens: {
+			md: '840px'
+		},
 		extend: {
 			colors: {
 				'msf-marine-blue': 'hsl(213, 96%, 18%)',
