@@ -43,16 +43,16 @@ input::placeholder {
 }
 
 .form-step {
-	@apply rounded-md p-8 md:mr-0 md:max-w-[440px] md:bg-msf-white md:p-0 md:pt-8;
+	@apply rounded-md md:max-w-[440px] md:bg-msf-white md:pt-8;
 	grid-area: form;
 }
 
 .form-content {
-	@apply bg-msf-white;
+	@apply relative bottom-[4.5rem] m-3 rounded-lg bg-msf-white p-8 md:static md:m-0 md:rounded-none md:p-0;
 }
 
 .form-button-wrapper {
-	@apply absolute bottom-0 z-10 flex bg-msf-white md:static;
+	@apply absolute bottom-0 flex w-full bg-msf-white p-5 md:static md:p-0;
 }
 
 .form-button {
