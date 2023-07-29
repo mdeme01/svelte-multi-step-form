@@ -9,7 +9,7 @@ const createStepStore = () => {
 		initialStep = storedStep ? JSON.parse(storedStep) : 1;
 	}
 
-	const { subscribe, update } = writable<number>(initialStep);
+	const { subscribe, update, set } = writable<number>(initialStep);
 
 	const updateStep = (action: 'inc' | 'dec' | 'res') =>
 		update((step) => {
@@ -19,9 +19,15 @@ const createStepStore = () => {
 			return newStep;
 		});
 
+	const backToPlanStep = () => {
+		if (browser) localStorage.setItem('step', JSON.stringify(2));
+		set(2);
+	};
+
 	return {
 		subscribe,
-		updateStep
+		updateStep,
+		backToPlanStep
 	};
 };
 

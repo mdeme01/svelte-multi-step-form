@@ -99,11 +99,27 @@ const createPlanStore = () => {
 			return newSubscription;
 		});
 
+	const getTotalCost = (subscription: Subscription) => {
+		const planCost =
+			subscription.billing === 'monthly'
+				? subscription.plan.props.monthlyPrice
+				: subscription.plan.props.yearlyPrice;
+		const addonCosts = subscription.addons.reduce(
+			(acc, cur) =>
+				subscription.billing === 'monthly'
+					? (acc += cur.props.monthlyPrice)
+					: (acc += cur.props.yearlyPrice),
+			0
+		);
+		return planCost + addonCosts;
+	};
+
 	return {
 		subscribe,
 		changePlan,
 		changeAddOns,
-		changeBilling
+		changeBilling,
+		getTotalCost
 	};
 };
 
