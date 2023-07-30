@@ -9,7 +9,7 @@ body {
 }
 
 main {
-	@apply grid gap-5 md:mt-[100px] md:gap-28 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3;
+	@apply grid gap-5 md:mt-[100px] md:gap-28 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3 md:shadow-md;
 
 	height: 100vh;
 	grid-template:
@@ -51,7 +51,7 @@ label {
 }
 
 .form-content {
-	@apply relative bottom-24 m-3 rounded-lg bg-msf-white p-5 md:static md:m-0 md:max-w-[440px] md:rounded-none md:p-0;
+	@apply relative bottom-24 m-3 rounded-lg bg-msf-white p-5 shadow-md md:static md:m-0 md:max-w-[440px] md:rounded-none md:p-0 md:shadow-none;
 }
 
 .form-button-wrapper {
