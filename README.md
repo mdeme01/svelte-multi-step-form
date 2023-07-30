@@ -1,29 +1,44 @@
-# SvelteKit starter
+# Frontend Mentor - Multi-step form solution
 
-This is a SvelteKit starter project, configured with TypeScript, ESLint and TailwindCSS.
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ).
 
-## Development
+## Table of contents
 
-Install the dependencies:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-```bash
-npm i
-```
+## Overview
 
-Run the development server:
+### The challenge
 
-```bash
-npm run dev
-```
+Users should be able to:
 
-## Build
+- Complete each step of the sequence
+- Go back to a previous step to update their selections
+- See a summary of their selections on the final step and confirm their order
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+- Receive form validation messages if:
+  - A field has been missed
+  - The email address is not formatted correctly
+  - A step is submitted, but no selection has been made
 
-To create a production version of your app:
+### Links
 
-```bash
-npm run build
-```
+- [Solution](https://your-solution-url.com)
+- [Live site](https://your-live-site-url.com)
 
-You can preview the production build with `npm run preview`.
+## My process
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Built with
+
+- [Svelte](https://svelte.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+
+## Author
+
+- Frontend Mentor - [@mdeme01](https://www.frontendmentor.io/profile/mdeme01)
