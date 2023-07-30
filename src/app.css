@@ -32,13 +32,15 @@ label {
 	@apply text-sm text-msf-marine-blue;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='tel'] {
-	@apply mt-2 rounded-md border border-msf-cool-gray/60 p-3;
+.text-input {
+	@apply mb-5 mt-2 w-full rounded-md border p-3;
 }
 
-input::placeholder {
+.text-input:focus {
+	@apply outline-none;
+}
+
+.text-input::placeholder {
 	@apply font-msf-font-medium;
 }
 
