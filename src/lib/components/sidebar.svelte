@@ -11,7 +11,7 @@
 
 <ol>
 	{#each steps as s (s.n)}
-		<li>
+		<li class="flex items-center gap-5">
 			<div
 				class={s.n === $step || (s.n === 4 && $step === 5)
 					? 'active list-item-number'
@@ -19,9 +19,9 @@
 			>
 				{s.n}
 			</div>
-			<div class={'list-item-text'}>
-				<div class={'text-msf-cool-gray'}>Step {s.n}</div>
-				<div class={'font-msf-font-bold text-msf-white'}>{s.text}</div>
+			<div class="hidden flex-col uppercase md:flex">
+				<div class="text-msf-cool-gray">Step {s.n}</div>
+				<div class="font-msf-font-bold text-msf-white">{s.text}</div>
 			</div>
 		</li>
 	{/each}
@@ -33,19 +33,11 @@
 		grid-area: sidebar;
 	}
 
-	li {
-		@apply flex items-center gap-5;
-	}
-
 	.list-item-number {
 		@apply flex h-10 w-10 items-center justify-center rounded-full border border-msf-white font-msf-font-bold text-msf-white;
 	}
 
-	.list-item-text {
-		@apply hidden flex-col uppercase md:flex;
-	}
-
-	.active {
+	.list-item-number.active {
 		@apply border-msf-light-blue bg-msf-light-blue text-msf-marine-blue;
 	}
 </style>

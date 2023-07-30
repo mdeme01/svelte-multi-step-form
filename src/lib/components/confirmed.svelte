@@ -22,7 +22,7 @@
 				subscription.reset();
 				step.updateStep('res');
 			}}
-			class={'btn-confirm'}>{'Reset'}</button
+			class="btn-confirm">Reset</button
 		>
 	</nav>
 </div>
