@@ -76,7 +76,7 @@ const createPlanStore = () => {
 		initialPlan = storedPlan ? JSON.parse(storedPlan) : defaultValue;
 	}
 
-	const { subscribe, update } = writable<Subscription>(initialPlan);
+	const { subscribe, update, set } = writable<Subscription>(initialPlan);
 
 	const changePlan = (plan: Plan) =>
 		update((value) => {
@@ -114,12 +114,18 @@ const createPlanStore = () => {
 		return planCost + addonCosts;
 	};
 
+	const reset = () => {
+		if (browser) localStorage.setItem('subscription', JSON.stringify(defaultValue));
+		set(defaultValue);
+	};
+
 	return {
 		subscribe,
 		changePlan,
 		changeAddOns,
 		changeBilling,
-		getTotalCost
+		getTotalCost,
+		reset
 	};
 };
 
