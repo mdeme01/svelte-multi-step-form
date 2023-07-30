@@ -8,7 +8,7 @@
 			<img src="/images/icon-thank-you.svg" alt="checkmark" />
 		</div>
 		<h1 class="mb-5 mt-5">Thank you!</h1>
-		<p class="mb-16 text-msf-cool-gray">
+		<p class="text-msf-cool-gray md:mb-28">
 			Thanks for confirming your subscription! We hope you have fun using our platform. If you ever
 			need support, please feel free to email us at support@loremgaming.com
 		</p>

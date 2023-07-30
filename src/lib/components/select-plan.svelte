@@ -7,8 +7,8 @@
 <div class="form-step">
 	<section class={'form-content'}>
 		<h1>Select your plan</h1>
-		<p>You have the option of monthly or yearly billing.</p>
-		<div class="flex flex-col gap-3 md:flex-row">
+		<p class="mb-5 text-msf-cool-gray md:mb-8">You have the option of monthly or yearly billing.</p>
+		<div class="mb-8 flex flex-col gap-3 md:flex-row">
 			{#each plans as plan (plan.id)}
 				<button
 					class={$subscription.plan.id === plan.id ? 'active radio-button' : 'radio-button'}
@@ -23,7 +23,7 @@
 								: '$' + plan.props.yearlyPrice + '/yr'}
 						</p>
 						{#if $subscription.billing === 'yearly'}
-							<p class="text-sm font-msf-font-medium text-msf-marine-blue">2 months free</p>
+							<p class="w-max text-sm font-msf-font-medium text-msf-marine-blue">2 months free</p>
 						{/if}
 					</div>
 				</button>

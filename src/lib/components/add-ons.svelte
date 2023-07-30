@@ -14,7 +14,7 @@
 <div class="form-step">
 	<section class="form-content">
 		<h1>Pick add-ons</h1>
-		<p>Add-ons help enchance your gaming experience.</p>
+		<p class="mb-5 text-msf-cool-gray md:mb-8">Add-ons help enchance your gaming experience.</p>
 		{#each addons as addon (addon.id)}
 			<div
 				class={$subscription.addons.map((a) => a.id).includes(addon.id)
@@ -51,7 +51,7 @@
 
 <style lang="postcss">
 	.checkbox-wrapper {
-		@apply flex items-center justify-between gap-5 rounded-lg border border-msf-light-gray pb-3 pl-5 pr-5 pt-3;
+		@apply mb-3 flex items-center justify-between gap-5 rounded-lg border border-msf-light-gray pb-3 pl-5 pr-5 pt-3;
 	}
 
 	.checkbox-wrapper.active {

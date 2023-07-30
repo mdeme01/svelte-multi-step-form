@@ -6,7 +6,7 @@
 <form on:submit={() => step.updateStep('inc')} class="form-step">
 	<section class="form-content">
 		<h1>Personal info</h1>
-		<p class="text-msf-cool-gray">Please provide your name, email address and phone number.</p>
+		<p class="mb-8 text-msf-cool-gray">Please provide your name, email address and phone number.</p>
 		<label>
 			<p>Name</p>
 			<input
@@ -16,10 +16,10 @@
 				id="name"
 				placeholder="e.g. Stephen King"
 				bind:value={$personalInfo.name}
-				class="w-full"
+				class="mb-5 w-full"
 			/>
 		</label>
-		<label>
+		<label class="mb-5">
 			<p>Email</p>
 			<input
 				required
@@ -28,7 +28,7 @@
 				id="email"
 				placeholder="e.g. stephenking@lorem.com"
 				bind:value={$personalInfo.email}
-				class="w-full"
+				class="mb-5 w-full"
 			/>
 		</label>
 		<label>
@@ -40,7 +40,7 @@
 				id="phone"
 				placeholder="e.g +1 234 567 890"
 				bind:value={$personalInfo.phone}
-				class="w-full"
+				class="mb-5 w-full"
 			/>
 		</label>
 	</section>

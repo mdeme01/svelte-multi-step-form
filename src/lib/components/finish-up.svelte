@@ -6,8 +6,10 @@
 <div class="form-step">
 	<section class="form-content">
 		<h1>Finishing up</h1>
-		<p>Double-check everything looks OK before confirming.</p>
-		<div class="mt-5 flex flex-col bg-msf-magnolia p-5">
+		<p class="mb-5 text-msf-cool-gray md:mb-8">
+			Double-check everything looks OK before confirming.
+		</p>
+		<div class="mt-5 flex flex-col rounded-md bg-msf-alabaster p-5">
 			<div class="flex items-center justify-between">
 				<div>
 					<p class="text-lg font-msf-font-medium text-msf-marine-blue">
@@ -28,7 +30,7 @@
 			{#if $subscription.addons.length}
 				<hr class="mb-3 mt-3" />
 			{/if}
-			<div class="flex flex-col gap-1">
+			<div class="flex flex-col gap-2">
 				{#each $subscription.addons as addon (addon.id)}
 					<div class="flex items-center justify-between">
 						<p class="text-msf-cool-gray">{addon.props.name}</p>
@@ -41,8 +43,8 @@
 				{/each}
 			</div>
 		</div>
-		<div class="mt-5 flex items-center justify-between">
-			<p>
+		<div class="mt-5 flex items-center justify-between pl-3 pr-3">
+			<p class="text-msf-cool-gray">
 				{$subscription.billing === 'monthly' ? 'Total (per month)' : 'Total (per year)'}
 			</p>
 			<p class="text-lg font-msf-font-bold text-msf-purplish-blue">
