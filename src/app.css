@@ -6,18 +6,19 @@
 
 body {
 	@apply grid bg-msf-magnolia font-msf-font-family text-msf-font-size font-msf-font-regular md:place-content-center;
-	height: 100vh;
 }
 
 main {
-	@apply grid gap-5 md:gap-28 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3;
+	@apply grid gap-5 md:mt-[100px] md:gap-28 md:rounded-md md:bg-msf-white md:pb-3 md:pl-3 md:pr-20 md:pt-3;
 
+	height: 100vh;
 	grid-template:
 		'sidebar' 0.1fr
 		'form' 1fr
 		/ 1fr;
 
 	@media screen and (min-width: 920px) {
+		height: auto;
 		grid-template:
 			'sidebar form' 1fr
 			/ 274px minmax(440px, 1fr);
@@ -45,16 +46,16 @@ label {
 }
 
 .form-step {
-	@apply rounded-md md:relative md:max-w-[440px] md:bg-msf-white md:pt-8;
+	@apply self-end rounded-md md:relative md:max-w-[440px] md:self-auto md:bg-msf-white md:pt-8;
 	grid-area: form;
 }
 
 .form-content {
-	@apply relative bottom-[4.5rem] m-3 rounded-lg bg-msf-white p-8 md:static md:m-0 md:max-w-[440px] md:rounded-none md:p-0;
+	@apply relative bottom-24 m-3 rounded-lg bg-msf-white p-5 md:static md:m-0 md:max-w-[440px] md:rounded-none md:p-0;
 }
 
 .form-button-wrapper {
-	@apply absolute bottom-0 flex w-full bg-msf-white p-5 md:bottom-5 md:p-0;
+	@apply flex w-full bg-msf-white p-5 md:absolute md:bottom-5 md:p-0;
 }
 
 .form-button {
