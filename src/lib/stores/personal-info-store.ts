@@ -23,7 +23,10 @@ const createPersonalInfoStore = () => {
 
 	const { subscribe, set } = writable<PersonalInfo>(initialValue);
 
-	const reset = () => set(defaultValue);
+	const reset = () => {
+		if (browser) localStorage.removeItem('personal-info');
+		set(defaultValue);
+	};
 
 	subscribe((value) => {
 		if (browser) localStorage.setItem('personal-info', JSON.stringify(value));

@@ -115,7 +115,7 @@ const createPlanStore = () => {
 	};
 
 	const reset = () => {
-		if (browser) localStorage.setItem('subscription', JSON.stringify(defaultValue));
+		if (browser) localStorage.removeItem('subscription');
 		set(defaultValue);
 	};
 
