@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://your-solution-url.com)
-- [Live site](https://your-live-site-url.com)
+- [Solution](https://www.frontendmentor.io/solutions/multistep-from-with-svelte-and-tailwind-KbnVbwh15p)
+- [Live site](https://svelte-multi-step-form.vercel.app/)
 
 ## My process
 
